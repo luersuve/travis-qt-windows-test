@@ -1,0 +1,1 @@
+# travis-qt-windows-test
