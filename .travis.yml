@@ -8,7 +8,7 @@ os: windows
 before_install:
   - echo $TRAVIS_OS_NAME
   # windows
-  - curl -vLo ~/qt-unified-windows-x86-online.exe http://download.qt.io/official_releases/online_installers/qt-unified-windows-x86-online.exe
-  - ~/qt-unified-windows-x86-online.exe --script qt-installer-windows.qs
+  - curl -vLo ~/qt-opensource-windows-x86-5.12.0.exe http://download.qt.io/official_releases/qt/5.12/5.12.0/qt-opensource-windows-x86-5.12.0.exe
+  - ~/qt-opensource-windows-x86-5.12.0.exe --script qt-installer-windows.qs
 after_script:
   - qmake --version
