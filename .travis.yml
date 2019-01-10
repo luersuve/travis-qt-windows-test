@@ -8,7 +8,7 @@ os: osx
         
 before_install:
   - echo $TRAVIS_OS_NAME
-  - git clone https://github.com/qt/qt5.git && cd qt
+  - git clone https://github.com/qt/qt5.git && cd qt5
   - ./init-repository --module-subset=qtbase,qt3d
   - ./configure -static -release -ltcg -optimize-size -no-pch -prefix /opt/512_release_static -skip webengine -nomake tools -nomake tests -nomake examples -opensource -confirm-license
   - make -j$(nproc)
