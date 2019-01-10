@@ -11,8 +11,8 @@ before_install:
   - git clone https://github.com/qt/qt5.git && cd qt5
   - ./init-repository --module-subset=qtbase,qt3d
   - ./configure -static -release -ltcg -optimize-size -no-pch -prefix /opt/512_release_static -skip webengine -nomake tools -nomake tests -nomake examples -opensource -confirm-license
-  - make -j$(nproc)
-  - make -j$(nproc) install
+  - make -j2
+  - make -j2 install
 # - curl -vLo ~/qt-opensource-windows-x86-5.12.0.exe http://download.qt.io/official_releases/qt/5.12/5.12.0/qt-opensource-windows-x86-5.12.0.exe
 # - ~/qt-opensource-windows-x86-5.12.0.exe --script qt-installer-windows.qs
   - export PATH=$PATH:/opt/512_release_static/bin
