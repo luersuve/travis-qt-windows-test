@@ -8,15 +8,11 @@ os: osx
         
 before_install:
   - echo $TRAVIS_OS_NAME
-  - git clone https://github.com/qt/qt5.git && cd qt5
-  - ./init-repository --module-subset=qtbase,qt3d
-  - ./configure -static -release -ltcg -optimize-size -no-pch -prefix /opt/512_release_static -skip webengine -nomake tools -nomake tests -nomake examples -opensource -confirm-license
-  - echo "make -j2"
-  - travis_wait 30 make -j2
-  - echo "make -j2 install"
-  - travis_wait 30 make -j2 install
-# - curl -vLo ~/qt-opensource-windows-x86-5.12.0.exe http://download.qt.io/official_releases/qt/5.12/5.12.0/qt-opensource-windows-x86-5.12.0.exe
-# - ~/qt-opensource-windows-x86-5.12.0.exe --script qt-installer-windows.qs
-  - export PATH=$PATH:/opt/512_release_static/bin
+  - wget https://drive.google.com/uc?authuser=0&id=1Jzn4COqKBaIIDTkJyB2KHfJ9yZAhpeqU&export=download -O ~/512_release_static.tar.gz
+  - mkdir ~/Qt
+  - tar xz ~/512_release_static.tar.gz -C ~/Qt
+  - cd ~/Qt && ls
+  - du -sh .
+  - export PATH=$PATH:~/Qt/512_release_static/bin
 after_script:
   - which qmake
