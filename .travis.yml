@@ -8,7 +8,8 @@ os: osx
         
 before_install:
   - echo $TRAVIS_OS_NAME
-  - wget https://drive.google.com/uc?authuser=0&id=1Jzn4COqKBaIIDTkJyB2KHfJ9yZAhpeqU&export=download -O ~/512_release_static.tar.gz
+  https://drive.google.com/a/holoplot.com/file/d/1Jzn4COqKBaIIDTkJyB2KHfJ9yZAhpeqU/view?usp=sharing
+  - curl -L -o https://drive.google.com/uc?authuser=0&id=1Jzn4COqKBaIIDTkJyB2KHfJ9yZAhpeqU&export=download
   - mkdir ~/Qt
   - tar xz ~/512_release_static.tar.gz -C ~/Qt
   - cd ~/Qt && ls
